@@ -1,0 +1,27 @@
+.offers {
+    margin-top: 2rem;
+
+    .offer {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+
+        &-courier {
+            background-color: $primary-color-lit;
+            padding: 2rem;
+            margin-bottom: 1rem;
+            &__content {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+
+            }
+
+        }
+
+        &-partner {
+            @extend .offer-courier;
+            background-color: $primary-color-dim;
+        }
+    }
+}

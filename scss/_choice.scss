@@ -1,0 +1,13 @@
+.choice {
+    margin-top: 2rem;
+    text-align: center;
+
+    &-content {
+        h2 {
+            color: $primary-color;
+        }
+        p {
+            color: grey;
+        }
+    }
+}

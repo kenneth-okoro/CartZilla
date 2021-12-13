@@ -1,0 +1,17 @@
+.partners {
+    width: 80%;
+    margin: 2rem auto;
+
+    &-logos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        height: 100%;
+    }
+
+     .partners-logo {
+            border: 1px solid $tertiary-color;
+            border: none;
+            box-shadow: 0 .5rem 1rem rgba($primary-color-mid, .4);
+        }
+}

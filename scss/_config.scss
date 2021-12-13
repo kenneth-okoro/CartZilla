@@ -1,0 +1,102 @@
+$primary-color: #272727;
+$primary-color-mid: #BABABA;
+$primary-color-lit: #F2F9FF;
+$primary-color-dim: #FEF9F3;
+$secondary-color: #070707;
+$secondary-color-mid: #0E1728;
+$tertiary-color: #2C3447;
+$tertiary-color-low: #263041;
+$intermediate-color: #FD5A5B;
+$lead-color: #414040;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {     
+    margin-top: 1rem;  
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    background: $intermediate-color;
+}
+
+.btn-secondary:hover {
+    background: rgba($intermediate-color, .7);
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in;
+}
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+
+@mixin flexSb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+@mixin grid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: 100%;
+}
+
+@mixin grid-3 {    
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);    
+    gap: 20px;
+    height: 100%;
+}
+
+@mixin grid-4 {    
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);    
+    gap: 20px;
+    height: 100%;
+}
+
+@mixin respond($breakpoint) {
+    // @if $breakpoint == phone {
+    //     @media only screen and (min-width: 37.5em) { @content }
+    // }
+    @if $breakpoint == tab-port {
+        @media only screen and (min-width: 48em) { @content }
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (min-width: 64em) { @content }
+    }
+    @if $breakpoint == big-desk {
+        @media only screen and (min-width: 90em) { @content }
+    }
+}

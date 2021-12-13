@@ -1,0 +1,134 @@
+@include respond(tab-port) {
+    .nav-left {
+       
+        img {        
+            top: 1rem;
+            left: 2rem;
+            width: 20%;
+        }
+    }
+
+    .menu-btn {
+        &__burger {
+            top: 1.5rem;
+        }
+    }
+
+    .city {        
+        &-foods {
+            @include grid;
+        }
+    }
+
+    .order {       
+
+    &-app {
+        margin: 1rem auto;
+        width: 70%;
+        
+        &__content {                        
+            flex-direction: row;
+            justify-content: space-between;
+
+            &--left {
+                margin-top: 2rem;
+                 p {
+                     color: $primary-color-mid;
+                 }
+            }
+
+            &--right {
+                width: 30%;
+                margin-top: 4rem;
+            }
+         }
+        }
+    }
+
+    .offers {
+        margin: 2rem auto;
+        &-desc {            
+
+            .offer {
+                @include grid;
+            }
+        }
+    }
+
+    .partners {
+        &-logos {
+            @include grid-3;
+        }
+    }
+
+    footer {
+        .footers {
+            @include grid-4;
+            align-items: start;
+            text-align: left;
+        }
+    }
+
+}
+
+@include respond(tab-land) {
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    .nav-left {      
+         img {        
+            top: .5rem;
+            left: 2rem;
+            width: 18%;
+        }
+    }    
+
+    .nav {
+        visibility: visible;
+
+        .menu-nav {
+            display: block;
+            transform: translateY(50%);
+            height: 100%;
+            background: transparent;
+            text-align: right;            
+
+            &__item {
+                display: inline;
+                padding-right: 1.5rem;                
+            }
+
+            &__link {
+                font-size: 1.5rem;
+                color: set-text-color(set-text-color($primary-color));
+
+                &:hover {
+                    color: $intermediate-color;
+                }
+            }
+        }
+    }
+    .city {
+        &-foods {
+            @include grid-3;
+        }
+    }
+
+      .partners {
+        &-logos {
+            @include grid-4;
+        }
+    }
+}
+
+@include respond(big-desk) {
+    .nav-left {      
+
+         img {                    
+            left: 2rem;
+            width: 12%;
+        }
+    }    
+}
+

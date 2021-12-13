@@ -1,0 +1,27 @@
+.order {
+    background-color: $intermediate-color;    
+    
+    &-app {
+        margin: 2rem;
+        
+        &__content {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &--left {
+                margin-top: 2rem;
+                 p {
+                     color: $primary-color-mid;
+                 }
+            }
+
+            &--right {
+                width: 35%;
+                margin-top: 4rem;
+            }
+        }
+    }
+}

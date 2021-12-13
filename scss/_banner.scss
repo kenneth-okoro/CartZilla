@@ -1,0 +1,29 @@
+.banner {
+    background: url(../img/hero-bg.jpg) center center;
+    background-color: red;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    height: 80vh;
+    // overflow: hidden;
+    position: relative;
+    
+    &-content {
+        margin-top: 2rem;
+            width: 80%;
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            transform: translate(-45%, -45%);
+            text-align: center;
+
+
+            &__intro {                
+                
+                &--place {
+                    color: $intermediate-color;
+                    }
+            }
+
+        }
+}

@@ -1,0 +1,62 @@
+@import './config', './banner', './menu', './choice', './city', './order', './offers', './partners', './footer', './responsive';
+
+html {
+    // This defines what 1rem is
+    font-size: 75%;
+
+    @include respond(tab-port) {
+        font-size: 80%;
+    }
+
+    @include respond(tab-land) { 
+        font-size: 85%;
+    }
+
+    @include respond(big-desk) {
+        font-size: 88%;
+    }
+
+}
+
+body {    
+    color: set-text-color($primary-color);   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+h3 {
+    color: set-text-color(set-text-color($primary-color));
+}
+
+a {
+    color: set-text-color(set-text-color($primary-color));
+    text-decoration: none;
+}
+
+header {
+    background-color: #fff;    
+    height: 60px;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.active {
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    color: $primary-color; 
+}
+
+img {
+    width: 100%;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}

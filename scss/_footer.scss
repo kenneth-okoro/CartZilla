@@ -1,0 +1,33 @@
+footer {
+    background-color: $tertiary-color;
+    height: 100%;
+    padding: 1rem;
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .footers {
+        padding: 1rem;
+
+        .footer {
+            margin-top: 1rem;
+
+            img {
+                width: 30%;
+            }
+
+            &-link {
+                color: $primary-color-mid;
+
+                &:hover {
+                    color: set-text-color($primary-color);
+                }
+            }
+        }
+    }
+
+     .copyright {        
+        color: $primary-color-mid;
+    }
+}
